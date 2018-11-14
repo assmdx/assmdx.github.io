@@ -4,7 +4,7 @@
 
 [Github](https://github.com/assmdx/)
 
-[Css2Typestyle](/css2typestyle/index.html)
+[Css2Typestyle](http://139.199.113.19:8000/)
 
 # I‘m learning
 
