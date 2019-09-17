@@ -1,13 +1,18 @@
 # assmdx
 
-# I‘m learning
+# Learning
 
-- Web System Build
-- Japanese (language)
-- Computer Vision
-- Paint
+- Web Application Developing 
+- Computer Vision (Image Segmentation)
+- Language
+    - Japanese
+    - English
+
+# Work
+[Github](https://github.com/assmdx)
+
 
 # Contact
 
-- Email:assmdx183@163.com
+- Email:  assmdx183@163.com
 
