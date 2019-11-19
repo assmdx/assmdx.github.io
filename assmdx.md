@@ -2,8 +2,12 @@
 
 # Learning
 
-- Web Application Developing 
-- Computer Vision (Image Segmentation)
+- development
+  -  Web Application Developing 
+
+- research
+    -  Computer Vision (Image Segmentation)
+    -   Data Integration
 - Language
     - Japanese
     - English
