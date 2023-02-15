@@ -1,22 +1,9 @@
-# assmdx
+# 文丑
 
-# Learning
+- 应用名称：文丑
+- 应用介绍：文丑是一款AI聊天机器人
+- 基础服务：文丑提供AI聊天服务，AI智能问答服务
 
-- development
-  -  Web Application Developing 
+# 联系我们
 
-- research
-    -  Computer Vision (Image Segmentation)
-    -   Data Integration
-- Language
-    - Japanese
-    - English
-
-# Work
-[Github](https://github.com/assmdx)
-
-
-# Contact
-
-- Email:  assmdx183@163.com
-
+- Email:  assmdx184@163.com
