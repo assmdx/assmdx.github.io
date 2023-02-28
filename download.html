@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <meta name="description" content="Mobile Application HTML5 Template">
   <meta http-equiv="Cache-Control" content="no-cache"  >
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
+
   <title>文丑App-下载</title>
 
   <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
@@ -35,7 +36,7 @@
       height: 100%;
       background-color: black;
       opacity: 0.3;
-      display: flex;
+      display: none;
       justify-content: right;
       /* background-image: url('./img/right_top_2.svg'); */
       /* background-size: contain; */
@@ -86,16 +87,16 @@ function is_weixn() {
 }  
 
 
-// if (browser.versions.ios) {
-//   alert('暂不支持iOS')
-// } else {
-//   if (is_weixn()) {
-//     document.getElementById("cover").style.display="flex";
-//   } else {
-//     document.getElementById("cover").style.display="none";
-//     window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
-//   }
-// }
+if (browser.versions.ios) {
+  alert('暂不支持iOS')
+} else {
+  if (is_weixn()) {
+    document.getElementById("cover").style.display="flex";
+  } else {
+    document.getElementById("cover").style.display="none";
+    window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
+  }
+}
 
 </script>
 </html>
