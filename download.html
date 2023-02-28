@@ -12,7 +12,6 @@
 
   <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
   <style>
-
     html, body {
       width: 100%;
       height: 100%;
@@ -21,23 +20,34 @@
     #bg {
       width: 100%;
       height: 100%;
-      background: #FF6200EE;
       position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
+      background-image: url('./img/download_bg.jpg');
+      background-size: contain;
     }
     #logo {
       width: 60%;
+    }
+    #cover {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.3;
+      display: none;
+      justify-content: right;
+    }
+    #cover > img {
+      width: 100vw;
+      height: 39vw;
     }
   </style>
 </head>
 <body>
   <div id="bg">
-    <div>
-      <div>
-        <img id="logo" src="./logo1.svg" alt="">
-      </div>
+    <div id="cover">
+      <img src="./img/right_top.jpg" alt="">
     </div>
   </div>
 </body>
@@ -72,8 +82,17 @@ function is_weixn() {
   }
 }  
 
+
 if (is_weixn()) {
-  alert(1)
+  document.getElementById("cover").style.display="flex";
+} else {
+  document.getElementById("cover").style.display="none";
+}
+
+if (browser.versions.ios) {
+  alert('暂不支持iOS')
+} else {
+  window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
 }
 
 </script>
