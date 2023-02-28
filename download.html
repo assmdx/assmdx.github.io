@@ -83,16 +83,15 @@ function is_weixn() {
 }  
 
 
-if (is_weixn()) {
-  document.getElementById("cover").style.display="flex";
-} else {
-  document.getElementById("cover").style.display="none";
-}
-
 if (browser.versions.ios) {
   alert('暂不支持iOS')
 } else {
-  window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
+  if (is_weixn()) {
+    document.getElementById("cover").style.display="flex";
+  } else {
+    document.getElementById("cover").style.display="none";
+    window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
+  }
 }
 
 </script>
