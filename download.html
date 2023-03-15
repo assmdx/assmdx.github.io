@@ -116,8 +116,10 @@ if (browser.versions.ios) {
 } else {
   if (is_weixn()) {
     document.getElementById("cover").style.display="flex";
+    document.getElementById("downloadContainer").style.display="none";
   } else {
     document.getElementById("cover").style.display="none";
+    document.getElementById("downloadContainer").style.display="flex";
     window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
   }
 }
