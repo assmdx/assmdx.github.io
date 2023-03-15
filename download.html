@@ -46,12 +46,36 @@
       width: 100vw;
       height: 27vw;
     }
+    #downloadContainer {
+      position: fixed;
+      width: 100vw;
+      bottom: 100px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #downloadBtn {
+      /* width: 100%; */
+      border-radius: 25px;
+      border: 0px;
+      background-color: #7948EA;
+      text-align: center;
+      padding: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      color: #ffffff;
+      font-size: 24px;
+    }
   </style>
 </head>
 <body>
   <div id="bg">
     <div id="cover">
       <img src="./img/right_top_2.png" alt="">
+    </div>
+    <div id="downloadContainer">
+      <button id="downloadBtn" onclick="download()">点击下载</button>
     </div>
   </div>
 </body>
@@ -96,6 +120,10 @@ if (browser.versions.ios) {
     document.getElementById("cover").style.display="none";
     window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
   }
+}
+
+function download() {
+  window.location.href = 'http://60.205.201.163:8889/slow/com.assmdx.slow.apk'
 }
 
 </script>
