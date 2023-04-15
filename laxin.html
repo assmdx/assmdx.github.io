@@ -12,6 +12,7 @@
   <title>文丑App-下载</title>
 
   <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+  <scriptsrc="https://g.alicdn.com/jssdk/u-link/index.min.js"></script>
   <style>
     html, body {
       width: 100%;
@@ -143,22 +144,35 @@ function is_weixn() {
 }  
 
 
-if (browser.versions.ios) {
-  window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
-} else {
-  if (is_weixn()) {
-    document.getElementById("cover").style.display="flex";
-    document.getElementById("downloadContainer").style.display="none";
-  } else {
-    document.getElementById("cover").style.display="none";
-    document.getElementById("downloadContainer").style.display="flex";
-    window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
-  }
-}
+// if (browser.versions.ios) {
+//   window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
+// } else {
+//   if (is_weixn()) {
+//     document.getElementById("cover").style.display="flex";
+//     document.getElementById("downloadContainer").style.display="none";
+//   } else {
+//     document.getElementById("cover").style.display="none";
+//     document.getElementById("downloadContainer").style.display="flex";
+//     window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
+//   }
+// }
 
 function download() {
-  window.location.href = 'http://60.205.201.163:8889/slow/com.assmdx.slow.apk'
+  // window.location.href = 'http://60.205.201.163:8889/slow/com.assmdx.slow.apk'
 }
+
+ULink([{
+    id:"linkidxxxusr17a1j7dj15hj2",// 后台生成的裂变活动LinkID
+    data:{// 传递的自定义动态参数
+      goodid:'as',
+      usrid:'ssmdx',
+},
+    selector:"#downloadBtn",//按钮的名称
+    // 可选高级功能，具体含义请看下方U-Link API文档
+    auto:true,
+    timeout:2000,
+    lazy:false
+}]);
 
 </script>
 </html>
