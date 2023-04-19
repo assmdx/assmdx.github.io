@@ -143,21 +143,25 @@ function is_weixn() {
 }  
 
 
-if (browser.versions.ios) {
-  window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
+if (is_weixn()) {
+  document.getElementById("cover").style.display="flex";
+  document.getElementById("downloadContainer").style.display="none";
 } else {
-  if (is_weixn()) {
-    document.getElementById("cover").style.display="flex";
-    document.getElementById("downloadContainer").style.display="none";
+  document.getElementById("cover").style.display="none";
+  document.getElementById("downloadContainer").style.display="flex";
+  if (browser.versions.ios) {
+    window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
   } else {
-    document.getElementById("cover").style.display="none";
-    document.getElementById("downloadContainer").style.display="flex";
     window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
   }
 }
 
 function download() {
-  window.location.href = 'http://60.205.201.163:8889/slow/com.assmdx.slow.apk'
+  if (browser.versions.ios) {
+    window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
+  } else {
+    window.location.href = 'http://60.205.201.163:8889/slow/com.assmdx.slow.apk'
+  }
 }
 
 </script>
