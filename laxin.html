@@ -167,18 +167,33 @@ function download() {
 }
 // var vConsole = new VConsole();
 
-ULink([{
-    id:"usr13u5ci6c7ij02",// 后台生成的裂变活动LinkID
-    data:{// 传递的自定义动态参数
-      goodid:'as',
-      usrid:'ssmdx',
-},
-    selector:"#gpt4Hint",//按钮的名称
-    // 可选高级功能，具体含义请看下方U-Link API文档
-    auto:true,
-    timeout:2000,
-    lazy:false
-}]);
 
+
+
+if (is_weixn()) {
+  document.getElementById("cover").style.display="flex";
+  document.getElementById("downloadContainer").style.display="none";
+} else {
+
+  ULink([{
+      id:"usr13u5ci6c7ij02",// 后台生成的裂变活动LinkID
+      data:{// 传递的自定义动态参数
+        goodid:'as',
+        usrid:'ssmdx',
+  },
+      selector:"#gpt4Hint",//按钮的名称
+      // 可选高级功能，具体含义请看下方U-Link API文档
+      auto:true,
+      timeout:500,
+      lazy:false
+  }]);
+  // document.getElementById("cover").style.display="none";
+  // document.getElementById("downloadContainer").style.display="flex";
+  // if (browser.versions.ios) {
+  //   window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
+  // } else {
+  //   window.open('http://60.205.201.163:8889/slow/com.assmdx.slow.apk', '_self');
+  // }
+}
 </script>
 </html>
