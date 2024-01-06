@@ -78,6 +78,8 @@
   </style>
 </head>
 <body>
+  <div class="title1">文丑AI</div>
+  <div class="title2">更好用的AI助手平台</div>
   <img class="phone" src="./img2/phone.png" alt="">
   <img class="downloadBtn" src="./img2/downloadIcon.png" alt="" onclick="download()">
   <img id="gotobrowser1" class="gotobrowser" src="./img2/topright.png" alt="">
@@ -140,7 +142,7 @@ function download() {
 
 if (is_weixn()) {
 } else {
-  document.getElementById("gotobrowser1").style.display="none";
+  document.getElementById("gotobrowser1").style.display="flex";
   if (browser.versions.ios) {
     window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
   } else {

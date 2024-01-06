@@ -9,112 +9,84 @@
   <meta http-equiv="Cache-Control" content="no-cache"  >
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" >
 
-  <title>文丑App-下载</title>
+  <title>文丑AI-下载</title>
 
-  <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./img2/logo.png" type="image/x-icon">
   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.0/vconsole.min.js"></script> -->
   <script src="https://g.alicdn.com/jssdk/u-link/index.min.js"></script>
   <style>
     html, body {
+      position: relative;
       width: 100%;
       height: 100%;
       margin: 0;
+      user-select: none;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      white-space: nowrap;
     }
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
+    body {
+      background: url(./img2/bg2.png) no-repeat center center fixed;
+      background-size: cover;
     }
-
-    #bg {
-      width: 100%;
-      height: 100%;
+    body::before {
+      content: '';
       position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-image: url('./img/download_bg.jpg');
+      top: 29.6px;
+      left: 28.8px;
+      display: block;
+      width: 43.6px;
+      height: 43.6px;
+      background: url(./img2/logo.png) no-repeat center;
       background-size: contain;
-      animation: fadeIn 2s ease-in-out;
     }
-    #logo {
-      width: 60%;
+    div {
+      margin: 0;
     }
-    #cover {
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      opacity: 0.3;
-      display: none;
-      justify-content: right;
-      /* background-image: url('./img/right_top_2.svg'); */
-      /* background-size: contain; */
-      /* background-repeat: no-repeat; */
-    }
-    #cover > img {
-      width: 100vw;
-      height: 27vw;
-    }
-    
-    @keyframes upDown {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    #downloadContainer {
-      position: fixed;
-      width: 100vw;
-      bottom: 100px;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      animation: upDown 2s infinite;
-    }
-    #downloadBtn {
-      /* width: 100%; */
-      border-radius: 25px;
-      border: 0px;
-      background-color: #7948EA;
+    .title1 {
+      padding: 85.2px 0 0 0;
       text-align: center;
-      padding: 10px;
-      padding-left: 20px;
-      padding-right: 20px;
-      color: #ffffff;
-      font-size: 24px;
+      color: white;
+      font-size: 66.4px;
     }
-    #gpt4Hint {
+    .title2 {
+      padding: 23.2px 0 0 0;
+      text-align: center;
+      color: white;
+      font-size: 31.2px;
+    }
+    .phone {
+      display: block;
+      padding: 46.4px 0 0 0;
+      margin: 0 auto;
+      width: 216px;
+      height: 442.8px;
+    }
+    .downloadBtn {
+      display: block;
+      width: 256px;
+      height: 60px;
+      margin: 58.8px auto 0 auto;
+    }
+    .gotobrowser {
       position: fixed;
-      bottom: 10px;
-      right: 10px;
-      font-size: 14px;
-      color: #000000;
-      opacity: 0.7;
-      font-weight: bold;
+      display: block;
+      top: 4px;
+      right: 9px;
+      width: 200px;
+      height: 108px;
     }
-
   </style>
 </head>
 <body>
-  <div id="bg">
-    <div id="cover">
-      <img src="./img/right_top_2.png" alt="">
-    </div>
-    <!-- <div id="downloadContainer">
-      <button id="downloadBtn" onclick="download()">点击下载</button>
-    </div> -->
-  </div>
-  <div id="gpt4Hint">本页面由GPT-4 技术生成</div>
+  <div class="title1">文丑AI</div>
+  <div class="title2">更好用的AI助手平台</div>
+  <img class="phone" src="./img2/phone.png" alt="">
+  <img class="downloadBtn" src="./img2/downloadIcon.png" alt="" onclick="download()">
+  <img id="gotobrowser1" class="gotobrowser" src="./img2/topright.png" alt="">
 </body>
 
-<script>  
+<script> 
 var browser = {
     versions: function () {
         var u = navigator.userAgent, app = navigator.appVersion;
@@ -171,10 +143,8 @@ function download() {
 
 
 if (is_weixn()) {
-  document.getElementById("cover").style.display="flex";
-  document.getElementById("downloadContainer").style.display="none";
 } else {
-
+  document.getElementById("gotobrowser1").style.display="none";
   ULink([{
       id:"usr13u5ci6c7ij02",// 后台生成的裂变活动LinkID
       data:{// 传递的自定义动态参数
