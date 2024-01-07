@@ -12,7 +12,7 @@
   <title>文丑AI-下载</title>
 
   <link rel="shortcut icon" href="./img2/logo.png" type="image/x-icon">
-  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.0/vconsole.min.js"></script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.0/vconsole.min.js"></script>
   <script src="https://g.alicdn.com/jssdk/u-link/index.min.js"></script>
   <style>
     html, body {
@@ -81,7 +81,7 @@
 <body>
   <div class="title1">文丑AI</div>
   <div class="title2">更好用的AI助手平台</div>
-  <img class="phone" src="./img2/phone1.png" alt="">
+  <img class="phone" src="./img2/phone.png" alt="">
   <img class="downloadBtn" src="./img2/downloadIcon.png" alt="" onclick="download()">
   <img id="gotobrowser1" class="gotobrowser" src="./img2/topright.png" alt="">
 </body>
@@ -131,17 +131,17 @@ function is_weixn() {
 // }
 
 function download() {
-  if (browser.versions.ios || browser.versions.iPad) {
+  if (browser.versions.ios) {
     window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
   } else {
     window.location.href = 'https://wenchou.top/com.assmdx.slow.apk'
   }
 }
-// var vConsole = new VConsole();
+var vConsole = new VConsole();
 
-// var screenWidth = window.innerWidth;
-// 
-// console.log(screenWidth + 'px')
+var screenWidth = window.innerWidth;
+
+console.log(screenWidth + 'px')
 
 
 if (is_weixn()) {

@@ -78,7 +78,7 @@
   </style>
 </head>
 <body>
-  <img class="phone" src="./img2/phone.png" alt="">
+  <img class="phone" src="./img2/phone1.png" alt="">
   <img class="downloadBtn" src="./img2/downloadIcon.png" alt="" onclick="download()">
   <img id="gotobrowser1" class="gotobrowser" src="./img2/topright.png" alt="">
 </body>
@@ -128,7 +128,7 @@ function is_weixn() {
 // }
 
 function download() {
-  if (browser.versions.ios) {
+  if (browser.versions.ios || browser.versions.iPad) {
     window.open('https://apps.apple.com/cn/app/%E6%96%87%E4%B8%91/id6447153386', '_self')
   } else {
     window.location.href = 'https://wenchou.top/com.assmdx.slow.apk'
